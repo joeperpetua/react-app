@@ -82,7 +82,7 @@ class Cards extends React.Component {
                             </ul>
                             
                             <button type="button" class="btn btn-info btn-rounded" value={item.id_product}
-                              onClick={event => this.onClick(event)}>Ver mas</button>
+                              onClick={event => this.onClick(event)}>Ver mas detalles</button>
                         
                           </div>
                         
