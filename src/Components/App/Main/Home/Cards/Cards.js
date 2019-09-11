@@ -1,34 +1,17 @@
 import React from 'react';
+
 import './Cards.css';
 
 
 class Cards extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      items: []
-    };
   }
 
-  componentDidMount () {
-    fetch('http://localhost/e-commerce/api/producto.php')
-    .then(response => response.json())
-    .then(data => {
-      this.setState({
-        items: data.response
-      });
-    })
-    .catch(err => {
-      console.log(err);
-    })
-    if (this.state.items) {
-      console.log('dou');
-    }else{
-      console.log("manito");
-    }
-  }
+  
   
   onClick (event) {
+    window.open('/product?id_product='+event.target.value, "_self");
     console.log(event.target.value)
   }
 
@@ -39,7 +22,7 @@ class Cards extends React.Component {
       <div className="row">
 
           
-          {this.state.items.map(
+          {this.props.items.map(
                   (item,index) =>
                       (
                         <div className="col-4">
