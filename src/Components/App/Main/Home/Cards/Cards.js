@@ -11,7 +11,7 @@ class Cards extends React.Component {
   
   
   onClick (event) {
-    window.open('/product?id_product='+event.target.value, "_self");
+    window.open('http://react-app.joeperpetua.me/product?id_product='+event.target.value, "_self");
     console.log(event.target.value)
   }
 

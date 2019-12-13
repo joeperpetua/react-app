@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    fetch('http://localhost/e-commerce/api/producto.php')
+    fetch('http://exophone.000webhostapp.com/api/producto.php')
     .then(response => response.json())
     .then(data => {
       this.setState({
