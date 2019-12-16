@@ -10,11 +10,12 @@ class Home extends React.Component {
     render(){
         return(
             <div className="container">
-            <div className="row">
+            <div className="row row-cols-1 row-cols-sm-1 row-cols-md-4">
               <div className="col-2">
                 <h1>Filtros</h1>
               </div>
-              <div className="col-10">
+              <div className="col">
+
                   <Cards items={this.props.items} />
               </div>
             </div>

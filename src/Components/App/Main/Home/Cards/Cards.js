@@ -25,7 +25,7 @@ class Cards extends React.Component {
           {this.props.items.map(
                   (item,index) =>
                       (
-                        <div className="col-4">
+                        <div className="col">
                         <div class="card booking-card">
                         
                           
