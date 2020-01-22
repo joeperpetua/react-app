@@ -58,7 +58,7 @@ class Cards extends React.Component {
                               </li>
                             </ul>
                             
-                            <Link to={"/product?id_product="+item.id_product} className="btn btn-info btn-rounded">Ver mas detalles</Link>
+                            <Link to={"/projects/react-ecommerce/product?id_product="+item.id_product} className="btn btn-info btn-rounded">Ver mas detalles</Link>
 
                           </div>
                         

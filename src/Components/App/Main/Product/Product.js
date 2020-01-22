@@ -14,7 +14,7 @@ class Product extends React.Component {
     
 
     componentDidMount () {
-        var url = 'http://exoapi.000webhostapp.com/api/producto.php'+window.location.search;
+        var url = 'https://exoapi.000webhostapp.com/api/producto.php'+window.location.search;
         fetch(url)
         .then(response => response.json())
         .then(data => {

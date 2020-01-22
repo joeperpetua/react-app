@@ -18,9 +18,9 @@ class Main extends React.Component{
     render(){
         return(
           <Switch>
-            <Route exact path="/" render={(props) => <Home {...props} items={this.props.items} />} />
-            <Route exact path="/product" render={(props) => <Product {...props} items={this.props.items} />} />
-            <Route path="/about" component={About} />
+            <Route exact path="/projects/react-ecommerce" render={(props) => <Home {...props} items={this.props.items} />} />
+            <Route exact path="/projects/react-ecommerce/product" render={(props) => <Product {...props} items={this.props.items} />} />
+            <Route path="/projects/react-ecommerce/about" component={About} />
           </Switch>
 
         );
