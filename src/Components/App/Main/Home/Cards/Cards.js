@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import './Cards.css';
 
@@ -6,13 +7,6 @@ import './Cards.css';
 class Cards extends React.Component {
   constructor(props) {
     super(props);
-  }
-
-  
-  
-  onClick (event) {
-    window.open('http://react-app.joeperpetua.me/product?id_product='+event.target.value, "_self");
-    console.log(event.target.value)
   }
 
 
@@ -25,12 +19,12 @@ class Cards extends React.Component {
           {this.props.items.map(
                   (item,index) =>
                       (
-                        <div className="col">
+                        <div className="col-md-6 col-xl-4 card-con">
                         <div class="card booking-card">
                         
                           
                           <div class="view overlay">
-                            <img class="card-img-top" src={"http://localhost/e-commerce/"+item.disp_pic} alt="Card image cap"></img>
+                            <img class="card-img-top" src={"http://exophone.rf.gd/"+item.disp_pic} alt="Card image cap"></img>
                             <a href="#!">
                               <div class="mask rgba-white-slight"></div>
                             </a>
@@ -64,9 +58,8 @@ class Cards extends React.Component {
                               </li>
                             </ul>
                             
-                            <button type="button" class="btn btn-info btn-rounded" value={item.id_product}
-                              onClick={event => this.onClick(event)}>Ver mas detalles</button>
-                        
+                            <Link to={"/product?id_product="+item.id_product} className="btn btn-info btn-rounded">Ver mas detalles</Link>
+
                           </div>
                         
                         </div>

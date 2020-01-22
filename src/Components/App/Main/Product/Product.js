@@ -14,7 +14,7 @@ class Product extends React.Component {
     
 
     componentDidMount () {
-        var url = 'http://exophone.000webhostapp.com/api/producto.php'+window.location.search;
+        var url = 'http://exoapi.000webhostapp.com/api/producto.php'+window.location.search;
         fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -53,7 +53,7 @@ class Product extends React.Component {
                             <div className="columns">
                                 <div className="column is-6">
                                 <div className="image is-2by2">
-                                    <img src={"http://localhost/e-commerce/"+elemento.disp_pic}></img>
+                                    <img src={"http://exophone.rf.gd/"+elemento.disp_pic}></img>
                                 </div>
                                 </div>
                                 <div className="column is-5 is-offset-1">
@@ -63,20 +63,14 @@ class Product extends React.Component {
                                 <br></br>
                                 
                                 <br></br>
-                                <p>Suspendisse sodales metus justo, ullamcorper iaculis purus interdum in. Sed ultricies enim felis, in interdum urna malesuada a. Morbi id ligula vel leo elementum dignissim quis vel purus. Donec iaculis, est ac maximus vestibulum, sapien mi lacinia urna, at laoreet felis lectus nec urna. Fusce egestas, neque vitae blandit scelerisque, leo arcu pellentesque risus, et volutpat neque nunc id massa. Aenean dapibus leo vel purus malesuada, eu ultrices nulla consequat. Duis erat orci, lobortis sed dictum id, pretium a nibh. Mauris pharetra ligula consequat gravida ornare.
-                                </p>
+                                <p>This is a product description</p>
                                 <br></br>
                                 <br></br>
-                                <p className="">
-                                    
-                                    &nbsp;
-                                    <input type="text" name="" className="input has-text-centered" value="1"></input>
-                                    &nbsp;
-                                    
-                                    &nbsp; &nbsp; &nbsp;
-                                    <a className="button is-primary">Add to cart</a>
-                                </p>
-                                <br></br>
+                                <input type="text" name="" className="input has-text-centered" value="1"></input>
+                                <br></br><br></br>
+                                <a className="button is-primary">Add to cart</a>
+                            
+                            
                                
                                 </div>
                             </div>
