@@ -1,20 +1,18 @@
 import React from 'react';
 
 import Cards from "./Cards/Cards.js"
+import './Home.css';
 
 class Home extends React.Component {
-    constructor(props){
-        super(props);
-    }
 
     render(){
         return(
             <div className="container">
                 <div className="row">
-                    <div className="col-2">
+                    <div className="col-md-2">
                         <h1>Filtros</h1>
                     </div>
-                    <div className="col-10">
+                    <div className="col-md-10">
                         <Cards items={this.props.items} />
                     </div>
                 </div>

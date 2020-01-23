@@ -5,9 +5,6 @@ import './Cards.css';
 
 
 class Cards extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
 
   render() {
@@ -19,42 +16,42 @@ class Cards extends React.Component {
           {this.props.items.map(
                   (item,index) =>
                       (
-                        <div className="col-md-6 col-xl-4 card-con">
-                        <div class="card booking-card">
+                        <div key={index} className="col-md-6 col-xl-4 card-con">
+                        <div className="card booking-card">
                         
                           
-                          <div class="view overlay">
-                            <img class="card-img-top" src={"http://exophone.rf.gd/"+item.disp_pic} alt="Card image cap"></img>
+                          <div className="view overlay">
+                            <img className="card-img-top" src={"https://joeperpetua.me/projects/react-ecommerce/"+item.disp_pic} alt={"imagen de " + item.disp_brand + " " + item.disp_model}></img>
                             <a href="#!">
-                              <div class="mask rgba-white-slight"></div>
+                              <div className="mask rgba-white-slight"></div>
                             </a>
                           </div>
                         
                           
-                          <div class="card-body">
+                          <div className="card-body">
                         
                             
-                            <h4 class="card-title font-weight-bold"><a>{item.disp_brand} {item.disp_model}</a></h4>
+                            <h4 className="card-title font-weight-bold">{item.disp_brand} {item.disp_model}</h4>
                             
 
-                            <strong><p class="mb-2">${item.product_price}</p></strong>
-                            <p class="mb-2">Stock: {item.product_stock}</p>
+                            <strong><p className="mb-2">${item.product_price}</p></strong>
+                            <p className="mb-2">Stock: {item.product_stock}</p>
                             
                   
-                            <hr class="my-4"></hr>
-                            <p class="lead"><strong>Especificaciones</strong></p>
+                            <hr className="my-4"></hr>
+                            <p className="lead"><strong>Especificaciones</strong></p>
                             <ul>
                               <li>
-                                <div class="chip mr-0">{item.cpu_brand} {item.cpu_model}</div>
+                                <div className="chip mr-0">{item.cpu_brand} {item.cpu_model}</div>
                               </li>
                               <li>
-                                <div class="chip mr-0">{item.rom_size}GB ROM</div>
+                                <div className="chip mr-0">{item.rom_size}GB ROM</div>
                               </li>
                               <li>
-                                <div class="chip mr-0">{item.ram_size}GB RAM</div>
+                                <div className="chip mr-0">{item.ram_size}GB RAM</div>
                               </li>
                               <li>
-                                <div class="chip mr-0">{item.battery_capacity}mAh</div>
+                                <div className="chip mr-0">{item.battery_capacity}mAh</div>
                               </li>
                             </ul>
                             

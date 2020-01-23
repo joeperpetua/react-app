@@ -35,54 +35,51 @@ class Product extends React.Component {
             {this.state.producto.map(
                   (elemento,index) =>
                       (
-                        <div>
-                        <div className="section product-header">
-                            <div className="container">
-                            <div className="columns">
-                                <div className="column">
-                                <span className="title is-3">{elemento.disp_brand} {elemento.disp_model}</span>
-                                <span className="title is-3 has-text-muted">&nbsp;|&nbsp;</span>
-                                <span className="title is-4 has-text-muted">{elemento.cat}</span>
+                        <div key={index}>
+                            <div className="section product-header">
+                                <div className="container">
+                                    <div className="columns">
+                                        <div className="column">
+                                        <span className="title is-3">{elemento.disp_brand} {elemento.disp_model}</span>
+                                        <span className="title is-3 has-text-muted">&nbsp;|&nbsp;</span>
+                                        <span className="title is-4 has-text-muted">{elemento.cat}</span>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
 
                         <div className="section">
                             <div className="container">
-                            <div className="columns">
-                                <div className="column is-6">
-                                <div className="image is-2by2">
-                                    <img src={"http://exophone.rf.gd/"+elemento.disp_pic}></img>
-                                </div>
-                                </div>
-                                <div className="column is-5 is-offset-1">
-                                <div className="title is-2">{elemento.disp_brand} {elemento.disp_model}</div>
-                                <p className="title is-3 has-text-muted">${elemento.product_price}</p>
-                                <hr></hr>
-                                <br></br>
-                                
-                                <br></br>
-                                <p>This is a product description</p>
-                                <br></br>
-                                <br></br>
-                                <input type="text" name="" className="input has-text-centered" value="1"></input>
-                                <br></br><br></br>
-                                <a className="button is-primary">Add to cart</a>
-                            
-                            
-                               
+                                <div className="columns">
+                                    <div className="column is-6">
+                                        <div className="image is-2by2">
+                                            <img src={"https://joeperpetua.me/projects/react-ecommerce/"+elemento.disp_pic} alt={"imagen de " + elemento.disp_brand + " " + elemento.disp_model}></img>
+                                        </div>
+                                    </div>
+                                    <div className="column is-5 is-offset-1">
+                                        <div className="title is-2">{elemento.disp_brand} {elemento.disp_model}</div>
+                                            <p className="title is-3 has-text-muted">${elemento.product_price}</p>
+                                            <hr></hr>
+                                            <br></br>
+                                            
+                                            <br></br>
+                                            <p>This is a product description</p>
+                                            <br></br>
+                                            <br></br>
+                                            <input type="text" defaultValue="1" className="input has-text-centered"></input>
+                                            <br></br><br></br>
+                                            <button className="button is-primary">Add to cart</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            </div>
-                        </div>
                         
 
                         <div className="section">
                             <div className="container">
                             <div className="tabs">
                                 <ul>
-                                <li className="is-active"><a>Especificaciones</a></li>
+                                <li className="is-active"><span>Especificaciones</span></li>
                                 
                                 </ul>
                             </div>
