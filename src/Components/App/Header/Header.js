@@ -4,8 +4,6 @@ import './Header.css';
 
 
 class Header extends React.Component {
-  
-
 
   onClick (event) {
     var btn = document.getElementById('nav-btn');
@@ -28,9 +26,6 @@ class Header extends React.Component {
 
         <div className="collapse navbar-collapse" id="nav-btn">
           <ul className="navbar-nav mr-auto">
-
-            
-            {console.log(this.props.links)}
             
             {
               this.props.links.map(
